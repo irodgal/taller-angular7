@@ -1,0 +1,14 @@
+<div class="container">
+    <h1>Detalle de personaje de Star Wars</h1>
+    <div class="row container justify-content-center">
+        <ul class="list-group">
+            <li class="list-group-item">{{ peopleDetailInfo.name }}</li>
+            <li class="list-group-item">{{ peopleDetailInfo.gender | titlecase }}</li>
+            <li class="list-group-item">{{ peopleDetailInfo.height }} cms.</li>
+            <li class="list-group-item">{{ peopleDetailInfo.mass }} kgs.</li>
+        </ul>
+    </div>
+    <div class="row container">
+        <button type="button" class="btn btn-primary" routerLink="/swinfo">Volver</button>
+    </div>
+</div>

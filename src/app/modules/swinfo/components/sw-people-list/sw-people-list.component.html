@@ -1,0 +1,16 @@
+<div class="container">
+    <h1>Listado de personajes de Star Wars</h1>
+    <p *ngIf="swPeopleCount">Se han encontrado {{ swPeopleCount }} personajes</p>
+    <div class="row container card-group">
+        <div class="col-3" *ngFor="let people of swPeopleList">
+            <div class="card" (click)="onClickCard(people.url)">
+                <div class="card-body">
+                    <h5 class="card-title">{{ people.name }}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row container" *ngIf="swPeopleListNext">
+        <button type="button" class="btn btn-primary" (click)="onClickNext()">Más resultados</button>
+    </div>
+</div>
